@@ -1,0 +1,48 @@
+{
+  "qualifiedName": "@traid/tiendanube-mcp-read",
+  "displayName": "Tienda Nube / Nuvemshop — Read-Only MCP Server",
+  "description": "Read-only MCP server for Tienda Nube (Argentina) and Nuvemshop (Brazil) — 10 tools for safe data access. Zero write risk.",
+  "homepage": "https://github.com/MarcosNahuel/tiendanube-mcp-read",
+  "iconUrl": "https://d26lpennugtm8s.cloudfront.net/stores/001/057/628/themes/common/logo-2063726756-1737744095-12cca7a3074d80a234f2ea87b0f5f0d91737744096.png",
+  "connections": [
+    {
+      "type": "stdio",
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "TN_STORE_ID": {
+            "type": "string",
+            "description": "Store ID (user_id returned by /apps/authorize/token)"
+          },
+          "TN_ACCESS_TOKEN": {
+            "type": "string",
+            "description": "OAuth access token (does not expire)"
+          },
+          "TN_APP_NAME": {
+            "type": "string",
+            "description": "App name for User-Agent header",
+            "default": "traid-mcp"
+          },
+          "TN_CONTACT_EMAIL": {
+            "type": "string",
+            "description": "Contact email for User-Agent header",
+            "default": "contacto@traid.agency"
+          }
+        },
+        "required": ["TN_STORE_ID", "TN_ACCESS_TOKEN"]
+      }
+    }
+  ],
+  "tools": [
+    { "name": "list_products", "description": "List products with filters" },
+    { "name": "get_product", "description": "Product detail by ID or SKU" },
+    { "name": "list_orders", "description": "List orders with filters" },
+    { "name": "get_order", "description": "Full order detail" },
+    { "name": "list_customers", "description": "List customers with search" },
+    { "name": "get_customer", "description": "Full customer detail" },
+    { "name": "list_categories", "description": "List categories" },
+    { "name": "get_store_info", "description": "Store general settings" },
+    { "name": "list_coupons", "description": "List discount coupons" },
+    { "name": "list_webhooks", "description": "List webhooks" }
+  ]
+}

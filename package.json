@@ -1,0 +1,60 @@
+{
+  "name": "@traid/tiendanube-mcp-read",
+  "version": "1.0.0",
+  "description": "MCP server read-only para Tienda Nube (Nuvemshop) — 10 tools de lectura para analítica y reporting.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "tiendanube-mcp-read": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "SKILL.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tiendanube",
+    "nuvemshop",
+    "ecommerce",
+    "seller",
+    "latam",
+    "claude",
+    "anthropic",
+    "ai",
+    "agent",
+    "read-only",
+    "analytics"
+  ],
+  "author": "TRAID Agency <contacto@traid.agency>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcosNahuel/tiendanube-mcp-read.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarcosNahuel/tiendanube-mcp-read/issues"
+  },
+  "homepage": "https://github.com/MarcosNahuel/tiendanube-mcp-read#readme"
+}
