@@ -1,5 +1,5 @@
 {
-  "name": "@traid/tiendanube-mcp-read",
+  "name": "@nahuelalbornoz/tiendanube-mcp-read",
   "version": "1.0.0",
   "description": "MCP server read-only para Tienda Nube (Nuvemshop) — 10 tools de lectura para analítica y reporting.",
   "license": "MIT",
